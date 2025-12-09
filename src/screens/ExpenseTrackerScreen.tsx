@@ -8,7 +8,7 @@ export default function ExpenseTrackingScreen() {
   const [expenses, setExpenses]=useState<any[]>([]);
   const [loading, setLoading] = useState(false);
 
-  //button press anaiamtion
+  // Button press anaiamtion
   const scale =new Animated.Value(1);
   const handlePress= () =>{
     Animated.sequence([
@@ -58,12 +58,12 @@ export default function ExpenseTrackingScreen() {
         </TouchableOpacity>
       </Animated.View>
 
-      {/* loading*/}
+      {/* Loading */}
       {loading && (
         <ActivityIndicator size="large" color="#4caf50" style={{ marginTop: 10 }} />
       )}
 
-      {/*expenses list*/}
+      {/* Expenses list */}
       <FlatList
         style ={{ marginTop: 20, width: "100%" }}
         data = {expenses}
